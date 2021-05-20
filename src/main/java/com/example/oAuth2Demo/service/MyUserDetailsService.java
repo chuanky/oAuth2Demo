@@ -1,11 +1,13 @@
-package com.example.oAuth2Demo.auth;
+package com.example.oAuth2Demo.service;
 
+import com.example.oAuth2Demo.security.MyUserDetails;
 import com.example.oAuth2Demo.model.User;
 import com.example.oAuth2Demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
@@ -13,7 +15,8 @@ import java.util.Optional;
  * @author Chuanqi Shi
  * @date 2021/Apr/29
  */
-public class MyUserDetailService implements UserDetailsService {
+@Service
+public class MyUserDetailsService implements UserDetailsService {
     @Autowired
     UserRepository userRepo;
 
