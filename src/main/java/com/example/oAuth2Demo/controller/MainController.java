@@ -30,8 +30,8 @@ public class MainController {
     UserRepository repo;
 
     @GetMapping("/")
-    public String hello(@RequestHeader("Authorization") String content) {
-        String token = content.substring(7);
+    public String hello(@RequestHeader("Authorization") String tokenHeader) {
+        String token = tokenHeader.substring(7);
         return "Hello " + jwtService.extractUsername(token) + " " + jwtService.extractUserId(token);
     }
 

@@ -1,6 +1,5 @@
 package com.example.oAuth2Demo.service;
 
-import com.example.oAuth2Demo.security.MyUserDetails;
 import com.example.oAuth2Demo.model.User;
 import com.example.oAuth2Demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

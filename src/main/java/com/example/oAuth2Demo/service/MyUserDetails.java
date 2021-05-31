@@ -1,4 +1,4 @@
-package com.example.oAuth2Demo.security;
+package com.example.oAuth2Demo.service;
 
 import com.example.oAuth2Demo.model.User;
 import org.springframework.security.core.GrantedAuthority;
