@@ -47,14 +47,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
             // disable csrf token for POST requests
-            .csrf().disable()
+//            .csrf().disable()
             // match requests with a filter chain
             .authorizeRequests()
-                .antMatchers("/createAuthToken").permitAll()
+//                .antMatchers("/createAuthToken").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+//                .sessionManagement()
+//                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+//                .and()
+                .formLogin()
+                .and()
+                .logout().permitAll();
 
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
     }
